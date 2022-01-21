@@ -1,0 +1,7 @@
+name: 'EZE Docker Action'
+description: 'Run Eze tests in a Docker container on repository contents.'
+author: 'riversafe'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
