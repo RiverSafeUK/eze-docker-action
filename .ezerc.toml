@@ -1,0 +1,73 @@
+# ========================================
+# EXAMPLE PYTHON TOOL CONFIG
+# ========================================
+[python-bandit]
+SOURCE = "app"
+
+[python-piprot]
+REQUIREMENTS_FILES = [
+    "requirements.txt"
+]
+NEWER_MAJOR_SEMVERSION_SEVERITY = "medium"
+NEWER_MINOR_SEMVERSION_SEVERITY = "none"
+NEWER_PATCH_SEMVERSION_SEVERITY = "none"
+IGNORE_BELOW_SEVERITY = "low"
+
+[python-safety]
+REQUIREMENTS_FILES = [
+    "requirements.txt"
+]
+IGNORE_BELOW_SEVERITY = "medium"
+REPORT_FILE = "reports/safety-report.json"
+
+[semgrep]
+PRINT_TIMING_INFO = false
+REPORT_FILE = "reports/semgrep-report.json"
+EXCLUDE = [
+    "tests",
+    "tests-integration"
+]
+CONFIGS = [
+    "p/ci",
+    "p/python",
+]
+
+[trufflehog]
+SOURCE = "."
+EXCLUDE = [
+    ".venv"
+]
+
+[python-cyclonedx]
+REQUIREMENTS_FILE = "requirements.txt"
+REPORT_FILE = "reports/python-cyclonedx-bom.json"
+
+# ========================================
+# REPORT CONFIG
+# ========================================
+[bom]
+REPORT_FILE = "reports/report-cyclonedx-sbom.json"
+
+[console]
+PRINT_SUMMARY_ONLY = true
+
+[json]
+REPORT_FILE = "reports/eze_report.json"
+
+[sarif]
+REPORT_FILE = "reports/eze_report.sarif"
+
+# ========================================
+# SCAN CONFIG
+# ========================================
+[scan]
+tools = ["python-piprot", "python-bandit", "python-safety", "python-cyclonedx", "trufflehog"]
+reporters = ["sarif"]
+
+
+[scan.local]
+reporters = ["sarif"]
+
+[scan.linux]
+tools = ["python-piprot", "python-bandit", "semgrep", "python-safety", "python-cyclonedx", "trufflehog"]
+reporters = ["json", "console", "bom"]

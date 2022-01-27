@@ -1,0 +1,29 @@
+name: Eze Github Actions
+
+on:
+  push: {branches: main}
+  pull_request: {branches: main}
+
+jobs:
+  eze-test:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    name: Eze Security Test
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v2
+      - name: "Generating SARIF with EZE"
+        uses: ./
+        id: eze-test
+      - name: Write sarif to workspace file.
+        run: |
+          cat > eze.sarif <<'EOF'
+            ${{ steps.eze-test.outputs.sarif_file }}
+          EOF
+      - name: Upload SARIF report
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          # Path to SARIF file relative to the root of the repository
+          sarif_file: eze.sarif
+          category: my-analysis-tool
