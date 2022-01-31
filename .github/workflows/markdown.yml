@@ -1,0 +1,43 @@
+name: Eze Github Actions for Markdown
+
+on:
+  push: 
+    branches: 
+      - main
+      - develop
+  pull_request: 
+    branches: 
+      - main
+
+jobs:
+  eze-test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    name: Eze Security Test
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v2
+      - name: "Testing with Eze - markdown"
+        uses: ./
+        with: 
+          upload_method: markdown
+        id: eze-test
+      - name: Write markdown to workspace file.
+        run: |
+          cat > eze.md <<'EOF'
+            # El real markdaon
+            ${{ steps.eze-test.outputs.markdown_file }}
+          EOF
+          cat eze.md
+      - name: Commit files
+        run: |
+          git add eze.md && \
+          git config --local user.email "github-actions[bot]@users.noreply.github.com" && \
+          git config --local user.name "github-actions[bot]" && \
+          git commit -m "Update security report" -a || \
+          echo No diff
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ github.ref }}
