@@ -5,7 +5,7 @@
 ## Summary  ![tools](https://img.shields.io/static/v1?style=plastic&label=Tools_executed&message=5&color=blue)
 ---
 
-Branch tested: feature/ab-967-create-action
+Branch tested: main
 
 
 ![critical](https://img.shields.io/static/v1?style=plastic&label=critical&message=0&color=red)
