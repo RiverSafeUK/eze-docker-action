@@ -10,3 +10,5 @@ You can use more advanced features in the Eze Console, a web interface we have d
 To use the action, you will have to set the job inside the workflow, you can get a template and replace as needed.
 
 And you will need to set a config file for Eze to run based on the language your code is in and the security scans you want to perform.
+
+There are 2 possible outcomes: sarif and markdown, and an individual template for each of them. 
