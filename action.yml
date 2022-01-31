@@ -1,4 +1,4 @@
-name: 'Docker YML for Github Action '
+name: 'Eze Github Action'
 description: 'Running the Dockerfile for Eze testing'
 author: 'riversafe'
 
