@@ -10,12 +10,10 @@ USER root
 RUN chmod a+w /data
 
 # Copy file to handle sarif into the container
-COPY entrypoint.sh /entrypoint.sh
-# Make entrypoint executable
-RUN chmod +x /entrypoint.sh
+COPY entrypoint.py /entrypoint.py
 
 # Set ezeuser as current user
 USER ezeuser
 
 # Eze test and report in sarif format
-ENTRYPOINT [ "/entrypoint.sh"]
+ENTRYPOINT [ "python", "/entrypoint.py"]
