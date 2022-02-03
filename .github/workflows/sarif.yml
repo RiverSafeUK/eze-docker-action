@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v2
-      - name: "Testing with Eze - sarif"
+      - name: Testing with Eze - sarif
         uses: ./
         with: 
           # Define the value of the upload format (sarif or markdown)
