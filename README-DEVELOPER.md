@@ -2,7 +2,7 @@
 # Eze Github Action (Developers documentation)
 
 ## Process
----
+
 
 Eze Action runs a `Dockerfile` that is based on the `riversafe/eze-cli` docker image and runs a python file `entrypoint.py` to modify the config file (named as .ezerc.toml) that Eze test will use to export a markdown report or sarif report, based on the user input.
 
@@ -17,8 +17,10 @@ Also if you want to test any change inside a workflow, you can use the sample wo
 
 Once testing is done you can publish your action, first merge the changes into main branch and create a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) with tag.
 
+It is possible also to create a workflow to publish the action once its merged in main.
+
 ## Contribute
----
+
 To contribute in adding more security tools to our EZE-CLI project, you can go to the following links: 
 - https://github.com/RiverSafeUK/eze-cli
 - https://pypi.org/project/eze-cli/
@@ -27,4 +29,4 @@ To contribute in adding more security tools to our EZE-CLI project, you can go t
 
 
 ## License
-You can review details in []
+You can review details in `License.md`

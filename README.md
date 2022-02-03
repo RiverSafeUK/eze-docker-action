@@ -17,7 +17,7 @@ You can use more advanced features in the **`Eze Console`**, a web interface we 
 
 
 ## Example Usage
----
+
 
 Check [action.yml](action.yml) for documentation
 
@@ -124,7 +124,7 @@ jobs:
 
 
 ## Output reports
----
+
 
 With Eze action you can choose from the 2 output report formats below, by customising your workflow:
 
