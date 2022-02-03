@@ -26,9 +26,9 @@ if os.environ.get("INPUT_UPLOAD_METHOD") == "sarif":
     )
     toml.close()
     os.system("eze test -s github")
-    markdown = file_object = open("reports/eze.sarif", "r")
-    content = replace_special_chararacters("".join(markdown.readlines()))
-    markdown.close()
+    sarif = file_object = open("reports/eze.sarif", "r")
+    content = replace_special_chararacters("".join(sarif.readlines()))
+    sarif.close()
     print(f"::set-output name=sarif_file::{content}")
 else:
     print("printing in MARKDOWN")
