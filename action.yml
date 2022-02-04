@@ -1,5 +1,5 @@
 name: 'Eze Github Action'
-description: 'Running the Dockerfile for Eze testing'
+description: 'Runs Eze Dockerfile to scan for vulnerabilities in your code'
 author: 'riversafe'
 
 inputs:
