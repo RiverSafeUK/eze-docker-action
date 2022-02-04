@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v2
-      - name: "Testing with Eze - markdown"
+      - name: Testing with Eze - markdown
         uses: ./
         with: 
           upload_method: markdown
