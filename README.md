@@ -2,7 +2,7 @@
 
 Eze is the one stop solution developed by RiverSafe Ltd for security testing in modern development.
 
-This is a Github Action for executing [Eze](https://hub.docker.com/r/riversafe/eze-cli) security tool in your repository, that scans for vulnerable dependencies, insecure code, hardcoded secrets, and license violations across a range of languages.
+This is a Github Action for executing [Eze](https://hub.docker.com/r/riversafe/eze-cli) security tool in your repository, that scans for vulnerable dependencies, insecure code, hardcoded secrets, and license violations across a range of languages by orchestrating and simplifying the use of multiple, widely recognized standalone tools like truffleHog and CycloneDX.
 
 Supported languages are: Python, Node and Java.
 
