@@ -77,8 +77,8 @@ jobs:
       - name: Commit files
         run: |
           git add eze.md && \
-          git config --local user.email "github-actions[bot]@users.noreply.github.com" && \
-          git config --local user.name "github-actions[bot]" && \
+          git config --local user.email "eze-github-action@users.noreply.github.com" && \
+          git config --local user.name "eze-action" && \
           git commit -m "Update security report" -a || \
           echo No diff
       - name: Push changes
