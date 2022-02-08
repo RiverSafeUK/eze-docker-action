@@ -1,4 +1,4 @@
-name: Eze Github Actions for Markdown
+name: Eze Github Action for Markdown
 
 on:
   push: 
@@ -25,6 +25,8 @@ jobs:
             ${{ steps.eze-test.outputs.markdown_file }}
           EOF
           cat eze.md
+
+      # You can ommit the following steps if you dont want to push the report into your repo. 
       - name: Commit files
         run: |
           git add eze.md && \
@@ -32,6 +34,7 @@ jobs:
           git config --local user.name "eze-action" && \
           git commit -m "Update security report" -a || \
           echo No diff
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
