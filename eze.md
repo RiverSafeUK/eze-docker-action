@@ -11,7 +11,7 @@
 ![medium](https://img.shields.io/static/v1?style=plastic&label=medium&message=0&color=yellow)
 ![low](https://img.shields.io/static/v1?style=plastic&label=low&message=0&color=lightgrey)
             
-<b>Branch tested: </b>develop
+<b>Branch tested: </b>main
 
 <b>Tools executed: </b>
 
