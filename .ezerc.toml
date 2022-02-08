@@ -25,7 +25,9 @@ PRINT_TIMING_INFO = false
 REPORT_FILE = "reports/semgrep-report.json"
 EXCLUDE = [
     "tests",
-    "tests-integration"
+    "tests-integration",
+    "eze.sarif",
+    "eze.md"
 ]
 CONFIGS = [
     "p/ci",
@@ -35,7 +37,9 @@ CONFIGS = [
 [trufflehog]
 SOURCE = "."
 EXCLUDE = [
-    ".venv"
+    ".venv",
+    "eze.sarif",
+    "eze.md"
 ]
 
 [python-cyclonedx]

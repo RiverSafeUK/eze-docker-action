@@ -242,7 +242,7 @@ Eze scan will generate a SARIF report that can be viewed in the `Security` tab o
 ### Markdown 
 Recommended for private repos with Github Free
 
-Eze scan will generate a markdown report that will be **uploaded directly** to your working branch. You can choose not to upload the file, by removing the steps: `Commit files` and `Push changes`
+Eze scan will generate a markdown report that will be **uploaded directly** to your working branch. You can choose not to upload the file, by removing the steps: `Commit files` and `Push changes`.
 
 <details>
 <summary>Example</summary>
@@ -251,10 +251,8 @@ Eze scan will generate a markdown report that will be **uploaded directly** to y
 # Eze Report Results
 
 
-## Summary  ![tools](https://img.shields.io/static/v1?style=plastic&label=Tools_executed&message=5&color=blue)
+## Summary  ![tools](https://img.shields.io/static/v1?style=plastic&label=Tools&message=5&color=blue)
 ---
-
-Branch tested: main
 
 
 ![critical](https://img.shields.io/static/v1?style=plastic&label=critical&message=0&color=red)
@@ -262,6 +260,16 @@ Branch tested: main
 ![medium](https://img.shields.io/static/v1?style=plastic&label=medium&message=7&color=yellow)
 ![low](https://img.shields.io/static/v1?style=plastic&label=low&message=2&color=lightgrey)
             
+<b>Branch tested: </b>main
+
+<b>Tools executed: </b>
+
+* python-piprot (SCA)
+                        
+* python-cyclonedx (SBOM)
+            
+* trufflehog (SECRET)
+
 
 ## Vulnerabilities
 ---
