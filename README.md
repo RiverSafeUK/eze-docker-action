@@ -242,7 +242,7 @@ Eze scan will generate a SARIF report that can be viewed in the `Security` tab o
 ### Markdown 
 Recommended for private repos with Github Free
 
-Eze scan will generate a markdown report that will be **uploaded directly** to your working branch. You can choose not to upload the file, by using a flag.
+Eze scan will generate a markdown report that will be **uploaded directly** to your working branch. You can choose not to upload the file, by removing the steps: `Commit files` and `Push changes`
 
 <details>
 <summary>Example</summary>
